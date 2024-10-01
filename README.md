@@ -29,66 +29,26 @@ The Histogram of gray scale image and color image is shown.
 ### Developed By: Sriram G
 ### Register Number: 212222230149
 
-```
-import cv2
-image = cv2.imread('SPB.jpeg')
-gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-cv2.imwrite('Gray.jpg', gray_image)
-cv2.imshow('Grayscale Image', gray_image)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-import numpy as np
-import cv2
-Gray_image = cv2.imread("Grey.jpg")
-import matplotlib.pyplot as plt
-gray_hist = cv2.calcHist([Gray_image],[0],None,[256],[0,256])
-plt.figure()
-plt.imshow(Gray_image)
-plt.show()
-plt.title("Histogram")
-plt.xlabel("Grayscale Value")
-plt.ylabel("Pixel Count")
-plt.stem(gray_hist)
-plt.show()
-import cv2
-gray_image = cv2.imread("Grey.jpg",0)
-cv2.imshow('Grey Scale Image',gray_image)
-equ = cv2.equalizeHist(gray_image)
-cv2.imshow("Equalized Image",equ)
-cv2.imwrite("Black.jpg",equ)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-import numpy as np
-import cv2
-import matplotlib.pyplot as plt
-Gray_image = cv2.imread("Grey.jpg", cv2.IMREAD_GRAYSCALE)
-EQU_image = cv2.imread("Black.jpg", cv2.IMREAD_GRAYSCALE)
-gray_hist = cv2.calcHist([Gray_image], [0], None, [256], [0, 256])
-equ_hist = cv2.calcHist([EQU_image], [0], None, [256], [0, 256])
-gray_hist = cv2.normalize(gray_hist, gray_hist).flatten()
-equ_hist = cv2.normalize(equ_hist, equ_hist).flatten()
-plt.figure()
-plt.title("Histogram Comparison")
-plt.xlabel("Grayscale Value")
-plt.ylabel("Pixel Count")
-plt.plot(gray_hist, color='blue', label='Gray Image Histogram')
-plt.plot(equ_hist, color='red', label='EQU Image Histogram')
-plt.legend()
-plt.show()
-```
+
 ## Output:
 
-### Input Image
-![image](https://github.com/user-attachments/assets/c5b56dba-d1a8-4dac-8aaa-cc8c536cb3f4)
+### Colour and Gray Image
+![image](https://github.com/user-attachments/assets/04c800e9-fe25-4e46-833a-f791ed1113f8)
+![image](https://github.com/user-attachments/assets/8e686a4e-ea89-4750-9402-1f1b6bf86cbd)
+
 
 
 ### Histogram of Grayscale Image
-![image](https://github.com/user-attachments/assets/68d932a5-0045-4b53-91fd-686681c6b471)
-![image](https://github.com/user-attachments/assets/1946ff2a-610d-43aa-bf1f-6abea5ada1cf)
+![image](https://github.com/user-attachments/assets/d93e87de-61e1-447f-bf90-69ec479095f1)
+![image](https://github.com/user-attachments/assets/ef9cb669-cee5-4a5a-8664-4489e970ab1e)
+
 
 ### Histogram Equalization of Grayscale Image.
-![image](https://github.com/user-attachments/assets/e3377b5c-b79b-4823-a68e-0492652ec273)
-![image](https://github.com/user-attachments/assets/a112bc62-ceae-4c0e-92ed-9925a8c39d20)
+![image](https://github.com/user-attachments/assets/95fa1ecf-2589-459a-90a4-ef8624f1b806)
+![image](https://github.com/user-attachments/assets/b3cfda55-cbe4-4e3b-ba40-3600052beea4)
+
+![image](https://github.com/user-attachments/assets/059aa85f-f382-451d-8d89-2723f90da86d)
+![image](https://github.com/user-attachments/assets/1720fde5-0ff3-47bc-9364-7927182c514b)
 
 
 
